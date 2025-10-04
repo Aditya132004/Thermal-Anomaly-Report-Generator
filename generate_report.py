@@ -159,4 +159,5 @@ for anomaly in anomalies:
 # ---------- Build PDF ----------
 doc.build(elements, onFirstPage=header_footer, onLaterPages=header_footer)
 
-print("✅ Multi-page PDF generated with real Voltage & Current values: anomaly_report.pdf")
+print("PDF generated: anomaly_report.pdf")
+
