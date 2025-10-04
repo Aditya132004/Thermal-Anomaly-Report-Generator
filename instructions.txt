@@ -1,0 +1,63 @@
+Instructions to Run Anomaly Report Script with Random Data Insertion
+
+1.Prepare the Project Folder
+
+Create a folder for your project, e.g., `Thermal Anomaly Report Generator`.
+Inside it, include:
+ ".py" files
+ ".db" file
+ Images folder
+ requirements.txt 
+
+-> Make sure thermal and RGB images exist in their respective folders.
+
+
+2. Install Python and Required Packages
+
+Ensure Python latest version is installed.
+Install required packages:
+
+"pip install reportlab qrcode pillow"
+
+* `reportlab` → PDF generation
+* `qrcode` → QR code generation
+* `pillow` → Image support for `qrcode` and `reportlab`
+
+
+3. Insert Random Anomaly Data
+
+Use the provided script `insert_random_anomalies.py` to populate the database:
+
+"python insert_random_anomalies.py"
+
+* This script creates the `anomalies` table if it doesn’t exist.
+* Clears old data to avoid duplicates.
+* Inserts exactly 4 anomalies using random categories, priorities, sizes, temperatures, parameters, locations, and randomly selected thermal/RGB images.
+
+-> The database `anomalies.db` will be automatically created in the project folder.
+
+
+
+4. Run the PDF Generation Script
+
+From the project folder:
+
+"python anomaly_report.py"
+
+
+* Reads anomalies from the database.
+* Generates a multi-page PDF named `anomaly_report.pdf` in the project folder.
+* Each page includes:
+
+  * Title and category
+  * Thermal and RGB images
+  * Voltage & Current values
+  * Anomaly details table
+  * QR code linking to the location
+
+
+5. Check the Output
+
+* The PDF will be created in the folder specified in the script (`anomaly_report.pdf`).
+* Verify all images, tables, and QR codes are correctly displayed.
+
