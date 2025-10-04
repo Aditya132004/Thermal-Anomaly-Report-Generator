@@ -6,3 +6,6 @@ qrcode
 sqlalchemy
 sqlite3
 matplotlib
+os
+random
+
