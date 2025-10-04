@@ -4,4 +4,5 @@ numpy
 pandas
 qrcode
 sqlalchemy
+sqlite3
 matplotlib
