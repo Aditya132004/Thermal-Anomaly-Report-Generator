@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS anomalies (
 );
 """)
 
-# ✅ Clear old data (avoid duplicate pages)
+# Clear old data (avoid duplicate pages)
 cursor.execute("DELETE FROM anomalies")
 
 categories = ["Loose Connection", "Overheating Transformer", "Damaged Conductor", "Corroded Joint"]
@@ -69,3 +69,4 @@ for i in range(4):
 conn.commit()
 conn.close()
 print("Inserted 4 random anomalies into DB using DJI image names")
+
