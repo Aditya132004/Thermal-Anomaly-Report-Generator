@@ -3,9 +3,9 @@ opencv-python
 numpy
 pandas
 qrcode
-sqlalchemy
 sqlite3
 matplotlib
 os
 random
+
 
